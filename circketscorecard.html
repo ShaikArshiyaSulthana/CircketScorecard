@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .btns {
+        display: flex;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="s">Score:0/0</h1>
+    <b id="sc">Score Line:</b>
+    <br /><br />
+    <div class="btns">
+      <button id="dot">DOT</button>
+      <button id="1">1</button>
+      <button id="2">2</button>
+      <button id="3">3</button>
+      <button id="4">4</button>
+      <button id="5">5</button>
+      <button id="6">6</button>
+      <button id="w">W</button>
+      <button id="wide">Wide</button>
+      <button id="noball">noball</button>
+    </div>
+    <script>
+      var runs = 0;
+      var wicket = 0;
+      var balls = 0;
+      var s = document.getElementById("s");
+      var sc = document.getElementById("sc");
+      function update() {
+        s.innerText = "Score:" + runs + "/" + wicket;
+      }
+
+      var dot = document.getElementById("dot");
+      dot.addEventListener("click", () => {
+        sc.append(" .");
+        balls++;
+        if (balls % 6 == 0) {
+          sc.append(" |");
+        }
+      });
+
+      var one = document.getElementById("1");
+      one.addEventListener("click", () => {
+        runs += 1;
+        sc.append(" 1");
+        update();
+        balls++;
+        if (balls % 6 == 0) {
+          sc.append(" |");
+        }
+      });
+
+      var two = document.getElementById("2");
+      two.addEventListener("click", () => {
+        runs += 2;
+        sc.append(" 2");
+        update();
+        balls++;
+        if (balls % 6 == 0) {
+          sc.append(" |");
+        }
+      });
+
+      var three = document.getElementById("3");
+      three.addEventListener("click", () => {
+        runs += 3;
+        sc.append(" 3");
+        update();
+        balls++;
+        if (balls % 6 == 0) {
+          sc.append(" |");
+        }
+      });
+
+      var four = document.getElementById("4");
+      four.addEventListener("click", () => {
+        runs += 4;
+        sc.append(" 4");
+        update();
+        balls++;
+        if (balls % 6 == 0) {
+          sc.append(" |");
+        }
+      });
+
+      var five = document.getElementById("5");
+      five.addEventListener("click", () => {
+        runs += 5;
+        sc.append(" 5");
+        update();
+        balls++;
+        if (balls % 6 == 0) {
+          sc.append(" |");
+        }
+      });
+
+      var six = document.getElementById("6");
+      six.addEventListener("click", () => {
+        runs += 6;
+        sc.append(" 6");
+        update();
+        balls++;
+        if (balls % 6 == 0) {
+          sc.append(" |");
+        }
+      });
+
+      var w = document.getElementById("w");
+      w.addEventListener("click", () => {
+        wicket += 1;
+        sc.append(" w");
+        update();
+        balls++;
+        if (balls % 6 == 0) {
+          sc.append(" |");
+        }
+      });
+
+      var wide = document.getElementById("wide");
+      wide.addEventListener("click", () => {
+        runs += 1;
+        sc.append(" 1wd");
+        update();
+        balls++;
+        if (balls % 6 == 0) {
+          sc.append(" |");
+        }
+      });
+
+      var noball = document.getElementById("noball");
+      noball.addEventListener("click", () => {
+        runs += 1;
+        sc.append(" 1nb");
+        update();
+        balls++;
+        if (balls % 6 == 0) {
+          sc.append(" |");
+        }
+      });
+    </script>
+  </body>
+</html>
